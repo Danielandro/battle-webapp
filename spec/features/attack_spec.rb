@@ -1,11 +1,7 @@
 feature "Attack player 2" do
   scenario "player 1 gets confirmation of attack" do
     sign_in_and_play     
-    click_link("Attack")
-    p "BODY"  
-    p page.body 
-    p "HEADERS"
-    p page.response_headers  
+    click_link("Attack")    
     expect(page).to have_content("Bob attacks Jim")
   end
 
